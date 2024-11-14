@@ -1,6 +1,6 @@
 import time
 
-def bubble(arr, draw_bars, speed, frame):
+def bubble(arr, draw_bars, speed):
     n = len(arr)
     for i in range(n):
         for j in range(n - 1 - i):

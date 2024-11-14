@@ -2,6 +2,8 @@ import tkinter as tk
 import random
 import time
 from algorithms.bubble_sort import bubble
+from algorithms.merge_sort import merge_sort
+from algorithms.quick_sort import quick
 
 class VisualizationFrame(tk.Frame):
     def __init__(self, app):
@@ -66,7 +68,15 @@ class VisualizationFrame(tk.Frame):
         self.flag = True
         speed = 1 / self.speed_slider.get()
         if self.algorithm_name == "Bubble Sort":
-            bubble(self.data, self.draw_bars, speed, self)
+            bubble(self.data, self.draw_bars, speed)
+        elif self.algorithm_name == "Merge Sort":
+            l = 0
+            h = len(self.data) - 1
+            merge_sort(self.data, l, h, self.draw_bars, speed)
+        elif self.algorithm_name == "Quick Sort":
+            l = 0
+            h = len(self.data) - 1
+            quick(self.data, l, h, self.draw_bars, speed)
         else:
             self.flag = False
         if self.flag:
