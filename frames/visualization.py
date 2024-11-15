@@ -4,6 +4,8 @@ import time
 from algorithms.bubble_sort import bubble
 from algorithms.merge_sort import merge_sort
 from algorithms.quick_sort import quick
+from algorithms.heap_sort import heap
+from algorithms.insertion_sort import insertion
 
 class VisualizationFrame(tk.Frame):
     def __init__(self, app):
@@ -77,6 +79,11 @@ class VisualizationFrame(tk.Frame):
             l = 0
             h = len(self.data) - 1
             quick(self.data, l, h, self.draw_bars, speed)
+        elif self.algorithm_name == "Heap Sort":
+            heap(self.data, self.draw_bars, speed)
+        elif self.algorithm_name == "Insertion Sort":
+            insertion(self.data, self.draw_bars, speed)
+            self.draw_bars(self.data)
         else:
             self.flag = False
         if self.flag:

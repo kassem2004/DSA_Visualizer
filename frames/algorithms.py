@@ -37,7 +37,7 @@ class AlgorithmsFrame(tk.Frame):
         if selected_type == "Search":
             options = ["Linear Search", "Binary Search"]
         elif selected_type == "Sort":
-            options = ["Bubble Sort", "Merge Sort", "Quick Sort", "Insertion Sort", "Selection Sort"]
+            options = ["Bubble Sort", "Merge Sort", "Quick Sort", "Heap Sort", "Insertion Sort", "Selection Sort"]
         elif selected_type == "Backtracking":
             options = ["N-Queens", "Sudoku Solver", "Knight's Tour"]
         self.specific_dropdown['values'] = options
