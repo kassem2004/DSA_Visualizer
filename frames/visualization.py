@@ -6,6 +6,7 @@ from algorithms.merge_sort import merge_sort
 from algorithms.quick_sort import quick
 from algorithms.heap_sort import heap
 from algorithms.insertion_sort import insertion
+from algorithms.selection_sort import selection
 
 class VisualizationFrame(tk.Frame):
     def __init__(self, app):
@@ -83,6 +84,8 @@ class VisualizationFrame(tk.Frame):
             heap(self.data, self.draw_bars, speed)
         elif self.algorithm_name == "Insertion Sort":
             insertion(self.data, self.draw_bars, speed)
+        elif self.algorithm_name == "Selection Sort":
+            selection(self.data, self.draw_bars, speed)
             self.draw_bars(self.data)
         else:
             self.flag = False
