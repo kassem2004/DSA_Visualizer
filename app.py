@@ -2,7 +2,7 @@ import tkinter as tk
 from frames.main_menu import MainMenuFrame
 from frames.algorithms import AlgorithmsFrame
 from frames.data_structures import DataStructuresFrame
-from frames.visualization import VisualizationFrame
+from frames.sorting_visualization import VisualizationFrame
 
 class DSAVisualizer:
     def __init__(self):
